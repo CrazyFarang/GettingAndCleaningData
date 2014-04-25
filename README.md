@@ -5,7 +5,7 @@
 
 UCI Machine Learning Repository is a collection of databases used in different experiments for analysis of machine learning algorithms, available for use by other researchers. (1) Subject of this analysis is the human activity recognition using smartphones data set, which is result of experiment where observed subjects performing different activities wearing a Samsung Galaxy S2 on their waist. (2)
 
-The goal of our analysis is to build a tidy dataset according given instructions, tha can be further used in future data analysis. Human activity recognition is very important domain of machine learning research because of its application in the real world as in medicine (technology driven assistive healthcare, monitoring of elderly people), sports, security, logistic support, location-based services, home automation etc.
+The goal of our analysis is to build a tidy dataset according given instructions, that can be further used in future data analysis. Human activity recognition is very important domain of machine learning research because of its application in the real world as in medicine (technology driven assistive healthcare, monitoring of elderly people), sports, security, logistic support, location-based services, home automation etc.
 
 **Data Collection**
 
@@ -21,7 +21,7 @@ In the R script first, data are downloaded to Data folder in the working directo
 
 Files *"subject_train.txt"*, *"X_train.txt"* and *"y_train.txt"* are read from *Train* folder in *UCI HAR Dataset*. All three files are combined by columns in one dataframe - *Train*.
 
-Files *"subject_test.txt"*, *"X_test.txt"* and *"y_test.txt"* are read from *Test* folder in *UCI HAR Dataset*. All three files are binded by colums in one dataframe - *Test*.
+Files *"subject_test.txt"*, *"X_test.txt"* and *"y_test.txt"* are read from *Test* folder in *UCI HAR Dataset*. All three files are merged by columns in one dataframe - *Test*.
 
 Then, these two dataframes - *Train* and *Test* are combined by rows, *Test* dataframe is appended at the end of *Train* dataframe in one collective dataframe - *Data*. The result dataframe has 10299 rows(observations) and 563 variables(subject id, 561 measure variables and activity code).
 
@@ -33,22 +33,27 @@ Next, names of the columns in dataframe *Data* are assigned. First column - *sub
 
 **3. Use descriptive activity names to name the activities in the data set.**
 
-Coding of activities performed by subjects is available in *"activity_labels.txt"* file in *UCI HAR Dataset* folder. According data in this file and activity column in dataTidy, new variable(column) *activitydesc* is added to dataframe *dataTidy*, containing descriptive names of activities performed by observed subjects.
+Coding of activities performed by subjects is available in *"activity_labels.txt"* file in *UCI HAR Dataset* folder. According data in this file and activity column in *dataTidy*, new variable(column) *activitydesc* is added to dataframe *dataTidy*, containing descriptive names of activities performed by observed subjects.
 
-**4. Appropriately label the data set with descriptive activity names.** 
+**4. Appropriately label the data set with descriptive column names.**
 
-5. Create a second, independent tidy data set with the average of each variable for each activity and each subject.
+The initial read files are without headers, so in the first step, columns in the dataframe were named accordingly labels provided in *"features.txt"* file. In the fourth segment, first we check if there are duplicates names, there aren't. Furthermore the column names are "cleaned", special characters (parentheses, hyphen) are eliminated and translated into lower cases. Dataframe *dataTidy* is saved as a text file (*"SamsungTidy.txt"*) in *Data* folder in the working directory.
 
+**5. Create a second, independent tidy data set with the average of each variable for each activity and each subject.**
+
+In the final step we first identify ID variables(activity, activitydesc and subjectid) and measure variables(means and standard deviations we will average). R Package *reshape2* (5) is used for melting-reshaping *dataTidy* dataframe in form suitable for casting according id and measure variables. Next we recast melted data computing average of means and standard deviations of measures for each activity and each subject. The result dataframe is *Tidy*. Last, dataframe "Tidy" is saved as *"Tidy.txt"* file in *Data* folder in the working directory.
 
 
 References:
 
-1. UCI Machine Learning Repository. [Online] http://archive.ics.uci.edu/ml/.
+1. UCI Machine Learning Repository. Online [http://archive.ics.uci.edu/ml/].
 
-2. Human Activity Recognition Using Smartphones Data Set . UCI Machine Learning Repository. [Online] http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones.
+2. Human Activity Recognition Using Smartphones Data Set . UCI Machine Learning Repository. Online [http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones].
 
-3. Coursera: Data Analysis By Jeff Leek . Coursers. [Online] https://class.coursera.org/dataanalysis-002/class.
+3. Coursera: Data Analysis By Jeff Leek . Coursers. Online [https://class.coursera.org/dataanalysis-002/class].
 
-4. The R Project for Statistical Computing. [Online] http://www.r-project.org/.
+4. The R Project for Statistical Computing. Online [http://www.r-project.org/].
+
+5. Reshape2 R Package. Online [http://cran.r-project.org/web/packages/reshape2/index.html]
 
 
