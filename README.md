@@ -14,25 +14,28 @@ Analysis is done in RStudio (R3.0.3).
 
 **Cleaning data**
 
-For the purpose of this analysis R script called run_analysis.R is created available in this repository. First, data are downloaded to Data folder in the working directory from the link aforementioned. Since the downloaded file is an archive file, it's unziped. The result is UCI HAR Dataset folder. Necessary steps for creating tidy data are following:
+This data repository contains R script called run_analysis.R, README.mdfile (brief explanation of the R script) and Codebook.md file(information about variables in tidy dataset).
+In the R script first, data are downloaded to Data folder in the working directory from the link aforementioned. Since the downloaded file is an archive file, it's unziped. The result is UCI HAR Dataset folder. Steps for creating tidy data are following:
 
 **1. Merge the training and the test sets to create one data set.**
 
-Files "subject_train.txt", "X_train.txt" and "y_train.txt" are read from Train folder in UCI HAR Dataset. All three files are combined by columns in one dataframe - Train.
+Files *"subject_train.txt"*, *"X_train.txt"* and *"y_train.txt"* are read from *Train* folder in *UCI HAR Dataset*. All three files are combined by columns in one dataframe - *Train*.
 
-Files "subject_test.txt", "X_test.txt" and "y_test.txt" are read from Test folder in UCI HAR Dataset. All three files are binded by colums in one dataframe - Test.
+Files *"subject_test.txt"*, *"X_test.txt"* and *"y_test.txt"* are read from *Test* folder in *UCI HAR Dataset*. All three files are binded by colums in one dataframe - *Test*.
 
-Then, these two dataframes - Train and Test are combined by rows, Test dataframe is appended at the end of Train dataframe in one collective dataframe - Data. The result dataframe has 10299 rows(observations) and 563 variables(subject id, 561 measure variables and activity code).
+Then, these two dataframes - *Train* and *Test* are combined by rows, *Test* dataframe is appended at the end of *Train* dataframe in one collective dataframe - *Data*. The result dataframe has 10299 rows(observations) and 563 variables(subject id, 561 measure variables and activity code).
 
-Next, names of the columns in dataframe Data are assigned. First column - subjectid, last column - activity and 561 measure columns are named accordingly to labels provided in "features.txt" file from supporting documentation files.
+Next, names of the columns in dataframe *Data* are assigned. First column - *subjectid*, last column - *activity* and 561 measure columns are named accordingly to labels provided in *"features.txt"* file from supporting documentation files.
 
 **2. Extract only the measurements on the mean and standard deviation for each measurement.**
 
+*Data* dataframe is subsetted(using regular expression *"mean\\(\\)|std\\(\\)|subjectid|activity"*) into dataframe *dataTidy*. *DataTidy* dataframe is consist of columns containing mean() and std() in their names plus the *subjectid* column and *activity* column. The result dataframe has 10299 rows and 68 columns.
 
+**3. Use descriptive activity names to name the activities in the data set.**
 
-3. Use descriptive activity names to name the activities in the data set
+Coding of activities performed by subjects is available in *"activity_labels.txt"* file in *UCI HAR Dataset* folder. According data in this file and activity column in dataTidy, new variable(column) *activitydesc* is added to dataframe *dataTidy*, containing descriptive names of activities performed by observed subjects.
 
-4. Appropriately label the data set with descriptive activity names. 
+**4. Appropriately label the data set with descriptive activity names.** 
 
 5. Create a second, independent tidy data set with the average of each variable for each activity and each subject.
 
