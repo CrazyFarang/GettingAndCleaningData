@@ -16,7 +16,7 @@ Analysis is done in RStudio (R3.0.3).
 
 For the purpose of this analysis R script called run_analysis.R is created available in this repository. First, data are downloaded to Data folder in the working directory from the link aforementioned. Since the downloaded file is an archive file, it's unziped. The result is UCI HAR Dataset folder. Necessary steps for creating tidy data are following:
 
-** *1. Merge the training and the test sets to create one data set.* **
+**1. Merge the training and the test sets to create one data set.**
 
 Files "subject_train.txt", "X_train.txt" and "y_train.txt" are read from Train folder in UCI HAR Dataset. All three files are combined by columns in one dataframe - Train.
 
@@ -26,7 +26,7 @@ Then, these two dataframes - Train and Test are combined by rows, Test dataframe
 
 Next, names of the columns in dataframe Data are assigned. First column - subjectid, last column - activity and 561 measure columns are named accordingly to labels provided in "features.txt" file from supporting documentation files.
 
-** *2. Extract only the measurements on the mean and standard deviation for each measurement.* **
+**2. Extract only the measurements on the mean and standard deviation for each measurement.**
 
 
 
