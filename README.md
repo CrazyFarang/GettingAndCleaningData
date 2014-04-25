@@ -14,19 +14,7 @@ Analysis is done in RStudio (R3.0.3).
 
 **Cleaning data**
 
-For the purpose of this analysis R script called run_analysis.R is created available in this repository. Necessary steps for creating tidy data are following:
-
-1. Merge the training and the test sets to create one data set.
- 
-2. Extract only the measurements on the mean and standard deviation for each measurement. 
-
-3. Use descriptive activity names to name the activities in the data set
-
-4. Appropriately label the data set with descriptive activity names. 
-
-5. Create a second, independent tidy data set with the average of each variable for each activity and each subject.
-
-First, data are downloaded to Data folder in the working directory from the link aforementioned. Since the downloaded file is an archive file, it's unziped. The result is UCI HAR Dataset folder. 
+For the purpose of this analysis R script called run_analysis.R is created available in this repository. First, data are downloaded to Data folder in the working directory from the link aforementioned. Since the downloaded file is an archive file, it's unziped. The result is UCI HAR Dataset folder. Necessary steps for creating tidy data are following:
 
 *1. Merge the training and the test sets to create one data set.*
 
@@ -35,6 +23,18 @@ Files "subject_train.txt", "X_train.txt" and "y_train.txt" are read from Train f
 Files "subject_test.txt", "X_test.txt" and "y_test.txt" are read from Test folder in UCI HAR Dataset. All three files are binded by colums in one dataframe - Test.
 
 Then, these two dataframes - Train and Test are combined by rows, Test dataframe is appended at the end of Train dataframe in one collective dataframe - Data. The result dataframe has 10299 rows(observations) and 563 variables(subject id, 561 measure variables and activity code).
+
+Next, names of the columns in dataframe Data are assigned. First column - subjectid, last column - activity and 561 measure columns are named accordingly to labels provided in "features.txt" file from supporting documentation files.
+
+*2. Extract only the measurements on the mean and standard deviation for each measurement.*
+
+
+
+3. Use descriptive activity names to name the activities in the data set
+
+4. Appropriately label the data set with descriptive activity names. 
+
+5. Create a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 
 
