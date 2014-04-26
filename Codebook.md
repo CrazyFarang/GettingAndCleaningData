@@ -33,39 +33,39 @@ The result dataset after cleaning the data contains 180 rows(observations) and 6
 30. tbodygyrojerkstdx - Average of standard deviations of time domain jerk signal of angular velocity along x axis by activity and subject
 31. tbodygyrojerkstdy - Average of standard deviations of time domain jerk signal of angular velocity along y axis by activity and subject
 32. tbodygyrojerkstdz - Average of standard deviations of time domain jerk signal of angular velocity along z axis by activity and subject
-33. tbodyaccmagmean"         
-34. tbodyaccmagstd"           
-35. tgravityaccmagmean"       
-36. tgravityaccmagstd"       
-37. tbodyaccjerkmagmean"      
-38. tbodyaccjerkmagstd"       
-39. tbodygyromagmean"         
-40. tbodygyromagstd"         
-41. tbodygyrojerkmagmean"     
-42. tbodygyrojerkmagstd"      
-"fbodyaccmeanx"            
-"fbodyaccmeany"           
-"fbodyaccmeanz"            
-"fbodyaccstdx"             
-"fbodyaccstdy"             
-"fbodyaccstdz"            
-"fbodyaccjerkmeanx"        
-"fbodyaccjerkmeany"        
-"fbodyaccjerkmeanz"        
-"fbodyaccjerkstdx"        
-"fbodyaccjerkstdy"         
-"fbodyaccjerkstdz"         
-"fbodygyromeanx"           
-"fbodygyromeany"          
-"fbodygyromeanz"           
-"fbodygyrostdx"            
-"fbodygyrostdy"            
-"fbodygyrostdz"           
-"fbodyaccmagmean"          
-"fbodyaccmagstd"           
-"fbodybodyaccjerkmagmean"  
-"fbodybodyaccjerkmagstd"  
-"fbodybodygyromagmean"     
-"fbodybodygyromagstd"      
-"fbodybodygyrojerkmagmean" 
-"fbodybodygyrojerkmagstd"
+33. tbodyaccmagmean - Average of means of time domain signal of magnitude of body linear acceleration by activity and subject
+34. tbodyaccmagstd - Average of standard deviations of time domain signal of magnitude of body linear acceleration by activity and subject
+35. tgravityaccmagmean - Average of means of time domain signal of magnitude of gravity acceleration by activity and subject
+36. tgravityaccmagstd - Average of standard deviations of time domain signal of magnitude of gravity acceleration by activity and subject
+37. tbodyaccjerkmagmean - Average of means of time domain jerk signal of magnitude of body linear acceleration by activity and subject
+38. tbodyaccjerkmagstd - Average of standard deviations of time domain jerk signal of magnitude of body linear acceleration by activity and subject      
+39. tbodygyromagmean - Average of means of time domain signal of magnitude of angular velocity by activity and subject
+40. tbodygyromagstd - Average of standard deviations of time domain signal of magnitude of angular velocity by activity and subject
+41. tbodygyrojerkmagmean - Average of means of time domain jerk signal of magnitude of angular velocity by activity and subject
+42. tbodygyrojerkmagstd - Average of dtandard deviations of time domain jerk signal of magnitude of angular velocity by activity and subject
+43. fbodyaccmeanx - Average of means of frequency of body acceleration along x axis by activity and subject 
+44. fbodyaccmeany - Average of means of frequency of body acceleration along y axis by activity and subject 
+45. fbodyaccmeanz - Average of means of frequency of body acceleration along z axis by activity and subject 
+46. fbodyaccstdx - Average of standard deviations of frequency of body acceleration along x axis by activity and subject 
+47. fbodyaccstdy - Average of standard deviations of frequency of body acceleration along y axis by activity and subject 
+48. fbodyaccstdz - Average of standard deviations of frequency of body acceleration along z axis by activity and subject 
+49. fbodyaccjerkmeanx - Average of means of jerk frequency of body acceleration along x axis by activity and subject 
+50. fbodyaccjerkmeany - Average of means of jerk frequency of body acceleration along y axis by activity and subject 
+51. fbodyaccjerkmeanz - Average of means of jerk frequency of body acceleration along z axis by activity and subject 
+52. fbodyaccjerkstdx - Average of standard deviations of jerk frequency of body acceleration along x axis by activity and subject
+53. fbodyaccjerkstdy - Average of standard deviations of jerk frequency of body acceleration along y axis by activity and subject
+54. fbodyaccjerkstdz - Average of standard deviations of jerk frequency of body acceleration along z axis by activity and subject
+55. fbodygyromeanx - Average of means of frequency of angular velocity along x axis by activity and subject 
+56. fbodygyromeany - Average of means of frequency of angular velocity along y axis by activity and subject
+57. fbodygyromeanz - Average of means of frequency of angular velocity along z axis by activity and subject
+58. fbodygyrostdx - Average of standard deviations of frequency of angular velocity along x axis by activity and subject
+59. fbodygyrostdy - Average of standard deviations of frequency of angular velocity along y axis by activity and subject
+60. fbodygyrostdz - Average of standard deviations of frequency of angular velocity along z axis by activity and subject
+61. fbodyaccmagmean"          
+62. fbodyaccmagstd"           
+63. fbodybodyaccjerkmagmean"  
+64. fbodybodyaccjerkmagstd"  
+65. fbodybodygyromagmean"     
+66. fbodybodygyromagstd"      
+67. fbodybodygyrojerkmagmean" 
+68. fbodybodygyrojerkmagstd"
