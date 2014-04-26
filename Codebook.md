@@ -1,5 +1,6 @@
 ##Codebook
 
+All steps for getting and cleaning data are explained in README.md file available in this repository.
 The result dataset after cleaning the data contains 180 rows(observations) and 68 variables (subject id, activity description and average of means and standard deviations of the measures). All the measure variables were normalized to interval [-1,1] before starting the data cleaning, so they are unit free.
 
 **List of variables:**
