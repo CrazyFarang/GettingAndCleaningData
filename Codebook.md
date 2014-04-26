@@ -1,6 +1,6 @@
 ##Codebook
 
-The result dataset after cleaning the data contains 180 rows(observations) and 68 variables (subject id, activity description and average of means and standard deviations of the measures). 
+The result dataset after cleaning the data contains 180 rows(observations) and 68 variables (subject id, activity description and average of means and standard deviations of the measures). All the measure variables were normalized to interval [-1,1] before starting the data cleaning, so they are unit free.
 
 **List of variables:**
 
@@ -61,11 +61,11 @@ The result dataset after cleaning the data contains 180 rows(observations) and 6
 58. fbodygyrostdx - Average of standard deviations of frequency of angular velocity along x axis by activity and subject
 59. fbodygyrostdy - Average of standard deviations of frequency of angular velocity along y axis by activity and subject
 60. fbodygyrostdz - Average of standard deviations of frequency of angular velocity along z axis by activity and subject
-61. fbodyaccmagmean"          
-62. fbodyaccmagstd"           
-63. fbodybodyaccjerkmagmean"  
-64. fbodybodyaccjerkmagstd"  
-65. fbodybodygyromagmean"     
-66. fbodybodygyromagstd"      
-67. fbodybodygyrojerkmagmean" 
-68. fbodybodygyrojerkmagstd"
+61. fbodyaccmagmean - Average of means of frequency of magnitute of body acceleration by activity and subject
+62. fbodyaccmagstd - Average of standard deviations of frequency of magnitute of body acceleration by activity and subject
+63. fbodybodyaccjerkmagmean - Average of means of jerk frequency of magnitute of body acceleration activity and subject
+64. fbodybodyaccjerkmagstd - Average of standard deviations of jerk frequency of magnitute of body acceleration by activity and subject
+65. fbodybodygyromagmean - Average of means of frequency of magnitute of angular velocity by activity and subject
+66. fbodybodygyromagstd - Average of standard deviations of frequency of magnitute of angular velocity by activity and subject
+67. fbodybodygyrojerkmagmean - Average of means of jerk frequency of magnitute of angular velocity by activity and subject
+68. fbodybodygyrojerkmagstd - Average of standard deviations of jerk frequency of magnitute of angular velocity by activity and subject
